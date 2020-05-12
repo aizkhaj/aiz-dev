@@ -1,7 +1,14 @@
-const Container = ({ children }) => (
-  <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
-    <div className="max-w-3xl mx-auto">{children}</div>
-  </div>
-);
+import Nav from "./Nav";
+import Footer from "./Footer";
+
+const Container = ({ children }) => {
+  return (
+    <>
+      <Nav />
+      <div className="flex flex-col">{children}</div>
+      <Footer />
+    </>
+  );
+};
 
 export default Container;
