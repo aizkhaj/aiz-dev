@@ -1,7 +1,6 @@
 import Heading from "../components/Heading";
 import Stack from "../components/Stack";
 import About from "../components/About";
-import ProjectShowcase from "../components/ProjectShowcase";
 import ProjectCard from "../components/ProjectCard";
 import Section from "../components/Section";
 import ArticleList from "../components/ArticleList";

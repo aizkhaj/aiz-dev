@@ -1,5 +1,5 @@
 const Section = ({ children, sectionName }) => (
-  <div className="mb-7">
+  <div className="mb-12">
     <h1 className="font-sans text-4xl font-bold">{sectionName}</h1>
     {children}
   </div>
