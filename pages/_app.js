@@ -1,5 +1,6 @@
 import React from 'react';
 import App from 'next/app';
+import Head from 'next/head';
 import { DefaultSeo } from 'next-seo';
 
 import '../styles/tailwind.css';
@@ -10,6 +11,9 @@ export default class MyApp extends App {
     const { Component, pageProps } = this.props;
     return (
       <>
+        <Head>
+          <link rel="shortcut icon" href="/favicon-z.ico" />
+        </Head>
         <DefaultSeo {...SEO} />
         <Component {...pageProps} />
       </>

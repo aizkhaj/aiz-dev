@@ -4,17 +4,18 @@ const ProjectCard = ({ href, logoPath, name, description, badge = null }) => {
   // create a logo if no logo available:
 
   return (
-    <div className="mx-auto my-4 flex flex-row space-around justify-center rounded-lg border-4 border-gray-300 hover:border-gray-500 py-2 max-w-lg items-center">
-      <div className="order-2 my-2 mx-4">
-        <h1 className="capitalize text-2xl font-sans font-semibold">{name}</h1>
-        <p className="text-gray-600">{description}</p>
-        <a href={href} className="font-semibold text-lg text-teal-500 no-underline">{href}</a>
+    <a href={href} target="_blank" className="no-underline">
+      <div className="mx-auto my-4 flex flex-row space-around justify-center rounded-lg border-4 border-gray-300 hover:border-gray-500 py-2 max-w-lg items-center">
+        <div className="order-2 my-2 mx-4">
+          <h1 className="capitalize text-2xl font-sans font-semibold">{name}</h1>
+          <p className="text-gray-600 mb-1">{description}</p>
+          <p className="font-semibold text-base text-teal-500 no-underline">{href}</p>
+        </div>
+        <div className="order-1 my-2 ml-4 mr-2">
+          <img className="w-16 rounded" src={logoPath} alt={`${name.toLowerCase()}-logo`} />
+        </div>
       </div>
-      <div className="order-1 my-2 ml-4 mr-2">
-        {/* {badge === null ? null : badgeSpan} */}
-        <img className="w-16 rounded" src={logoPath} alt={`${name.toLowerCase()}-logo`} />
-      </div>
-    </div>
+    </a>
   );
 }
 
