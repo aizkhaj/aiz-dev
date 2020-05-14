@@ -1,10 +1,11 @@
-import Heading from "../components/Heading";
 import Stack from "../components/Stack";
 import About from "../components/About";
 import ProjectCard from "../components/ProjectCard";
 import Section from "../components/Section";
-import ArticleList from "../components/ArticleList";
+import Article from "../components/Article";
 import Container from "../components/Container";
+
+import { frontMatter as openSourceFirst } from "./blog/first-open-source-project.mdx";
 
 export default function Index() {
   return (
@@ -12,7 +13,7 @@ export default function Index() {
       <Stack>
         <About />
         <Section sectionName="Latest Posts">
-          <ArticleList />
+          <Article {...openSourceFirst} />
         </Section>
         <Section sectionName="Projects">
           <ProjectCard
