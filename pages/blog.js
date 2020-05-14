@@ -1,16 +1,30 @@
 import Container from "../components/Container";
 import Stack from "../components/Stack";
 import Heading from "../components/Heading";
+import Article from "../components/Article";
+import Section from "../components/Section";
 
-const Blog = () => (
-  <Container>
-    <Stack>
-      <div className="mt-7 mb-10">
-        <Heading>Blog</Heading>
-      </div>
-      <p>This page is under progress though, so bear with me 🤓</p>
-    </Stack>
-  </Container>
-);
+import { frontMatter as blogPosts } from "./blog/**/*.mdx";
+
+const Blog = () => {
+  const sortedByMostRecentBlogPosts = blogPosts.sort(
+    (a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
+  );
+
+  return (
+    <Container>
+      <Stack>
+        <div className="mt-7 mb-10">
+          <Heading>Blog</Heading>
+        </div>
+        <Section sectionName="All Posts">
+          {sortedByMostRecentBlogPosts.map((frontMatter) => (
+            <Article key={frontMatter.title} {...frontMatter} />
+          ))}
+        </Section>
+      </Stack>
+    </Container>
+  );
+};
 
 export default Blog;
