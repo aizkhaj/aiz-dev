@@ -37,8 +37,7 @@ export default function Index() {
         </Section>
         <Section sectionName="Get in touch!">
           <p>
-            Reach out to me via Twitter, connect with me on LinkedIn, or shoot
-            me a message at hello@aizaz.dev
+            Reach out to me via <a href="https://www.twitter.com/aizazkhaja" target="_blank" className="no-underline text-teal-700">Twitter</a> or connect with me on <a href="https://www.linkedin.com/in/aizaz-khaja" target="_blank" className="no-underline text-teal-700">LinkedIn</a>.
           </p>
         </Section>
       </Stack>
