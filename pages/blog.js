@@ -6,19 +6,25 @@ import Section from "../components/Section";
 
 import { frontMatter as blogPosts } from "./blog/**/*.mdx";
 
-const Blog = () => (
-  <Container>
-    <Stack>
-      <div className="mt-7 mb-10">
-        <Heading>Blog</Heading>
-      </div>
-      <Section sectionName="All Posts">
-        {blogPosts.map((frontMatter) => (
-          <Article key={frontMatter.title} {...frontMatter} />
-        ))}
-      </Section>
-    </Stack>
-  </Container>
-);
+const Blog = () => {
+  const sortedByMostRecentBlogPosts = blogPosts.sort(
+    (a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
+  );
+
+  return (
+    <Container>
+      <Stack>
+        <div className="mt-7 mb-10">
+          <Heading>Blog</Heading>
+        </div>
+        <Section sectionName="All Posts">
+          {sortedByMostRecentBlogPosts.map((frontMatter) => (
+            <Article key={frontMatter.title} {...frontMatter} />
+          ))}
+        </Section>
+      </Stack>
+    </Container>
+  );
+};
 
 export default Blog;

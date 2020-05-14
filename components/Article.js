@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const Article = (frontMatter) => {
-  const { title, summary } = frontMatter;
+  const { title, summary, publishedAt } = frontMatter;
   const slug = frontMatter.__resourcePath
     .replace("blog/", "")
     .replace(".mdx", "");
@@ -14,6 +14,9 @@ const Article = (frontMatter) => {
             <h3 className="text-2xl mb-1 font-medium">{title}</h3>
           </div>
           <p className="text-gray-700">{summary}</p>
+          <div className="flex flex-row w-full content-start">
+            <span className="text-xs text-teal-500 mt-1">{publishedAt}</span>
+          </div>
         </div>
       </a>
     </Link>

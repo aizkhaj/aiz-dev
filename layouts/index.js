@@ -15,13 +15,13 @@ export default (frontMatter) => {
           <div className="flex flex-col w-full content-start justify-start mt-7">
             <h1 className="text-4xl font-bold">{title}</h1>
             <div className="flex flex-row justify-between mt-2 mb-4 w-full">
-              <div className="flex items-center content-center">
+              <div className="flex items-center content-center my-2">
                 <img
-                  src="https://twitter.com/aizazkhaja/photo"
+                  src="/static/images/aizaz.png"
                   alt="aizaz-pic"
-                  className="m-2 w-2"
+                  className="w-10 rounded-full"
                 />
-                <div className="ml-10 text-sm text-gray-700">
+                <div className="ml-4 text-sm text-gray-700">
                   {"Aizaz Khaja / "}
                   {format(parseISO(frontMatter.publishedAt), "MMMM dd, yyyy")}
                 </div>
