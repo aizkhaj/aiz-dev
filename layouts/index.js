@@ -31,7 +31,7 @@ export default (frontMatter) => {
               </div>
             </div>
           </div>
-          {content}
+          <div className="markdown">{content}</div>
         </Stack>
       </Container>
     );
