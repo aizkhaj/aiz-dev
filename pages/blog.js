@@ -2,8 +2,8 @@ import { NextSeo } from "next-seo";
 import Container from "../components/Container";
 import Stack from "../components/Stack";
 import Heading from "../components/Heading";
-import Article from "../components/Article";
 import Section from "../components/Section";
+import Article from "../components/Article";
 
 // eslint-disable-next-line import/no-unresolved, import/extensions
 import { frontMatter as blogPosts } from "./blog/**/*.mdx";
