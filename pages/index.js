@@ -1,5 +1,5 @@
 import Stack from "../components/Stack";
-import About from "../components/About";
+import IntroHeading from "../components/IntroHeading";
 import ProjectCard from "../components/ProjectCard";
 import Section from "../components/Section";
 import Article from "../components/Article";
@@ -21,7 +21,7 @@ export default function Index() {
   return (
     <Container>
       <Stack>
-        <About />
+        <IntroHeading />
         <Section sectionName="Latest Posts">
           {threeRecentPosts.map((post) => {
             return <Article key={post.title} {...post} />;
