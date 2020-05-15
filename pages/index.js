@@ -23,7 +23,7 @@ export default function Index() {
       <Stack>
         <IntroHeading />
         <Section sectionName="Latest Posts">
-          {threeRecentPosts.map((post) => {
+          {...threeRecentPosts.map((post) => {
             return <Article key={post.title} {...post} />;
           })}
         </Section>
