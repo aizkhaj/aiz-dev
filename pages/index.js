@@ -22,11 +22,11 @@ export default function Index() {
     <Container>
       <Stack>
         <IntroHeading />
-        <Section sectionName="Latest Posts">
-          {...threeRecentPosts.map((post) => {
-            return <Article key={post.title} {...post} />;
-          })}
-        </Section>
+        {/* <Section sectionName="Latest Posts">
+          {threeRecentPosts.map((post) => (
+            <Article key={post.title} {...post} />
+          ))}
+        </Section> */}
         <Section sectionName="Projects">
           <ProjectCard
             href="https://halalscope.co"
