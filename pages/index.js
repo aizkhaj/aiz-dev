@@ -5,7 +5,7 @@ import Section from "../components/Section";
 import Article from "../components/Article";
 import Container from "../components/Container";
 
-import { frontMatter as blogPosts } from "./blog/**/*.mdx";
+import { frontMatter as blogPosts } from "./blog/*.mdx";
 
 export default function Index() {
   const mostRecentPosts = blogPosts.sort(
