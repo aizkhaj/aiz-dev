@@ -31,7 +31,7 @@ const About = () => (
             because I don't like to be boxed in.
           </p>
           <p>
-            It just so happens that I enjoy journalling, and see writing as a
+            It just so happens that I enjoy journaling, and see writing as a
             means to learning more while connecting with people and organizations.
           </p>
           <p>
