@@ -34,6 +34,11 @@ export default function Index() {
             name="Halalscope"
             description="Find halal investing opportunities using Halalscope."
           />
+          <ProjectCard
+            href="https://github.com/aizkhaj/candlestickcharts.js"
+            name="Candlestickcharts.js"
+            description="Created an open source library to allow developers to add static financial charts using given data. Implemented using JavaScript and HTML Canvas to plot a chart."
+          />
         </Section>
         <Section sectionName="Get in touch!">
           <p>

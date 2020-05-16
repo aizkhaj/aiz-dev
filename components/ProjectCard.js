@@ -1,5 +1,11 @@
-const ProjectCard = ({ href, logoPath, name, description, badge = null }) => {
+const ProjectCard = ({ href, logoPath = null, name, description, badge = null }) => {
   const badgeSpan = (<span className="rounded-full py-2 px-4 border-4 border-teal-500 text-teal-500">badge</span>);
+
+  const logoDiv = (
+    <div className="order-1 my-2 ml-4 mr-2">
+      <img className="w-16 rounded" src={logoPath} alt={`${name.toLowerCase()}-logo`} />
+    </div>
+  )
 
   // create a logo if no logo available:
 
@@ -9,11 +15,9 @@ const ProjectCard = ({ href, logoPath, name, description, badge = null }) => {
         <div className="order-2 my-2 mx-4">
           <h1 className="capitalize text-2xl font-sans font-semibold">{name}</h1>
           <p className="text-gray-600 mb-1">{description}</p>
-          <p className="font-semibold text-base text-teal-500 no-underline">{href}</p>
+          {/* <p className="font-semibold text-base text-teal-500 no-underline">{href}</p> */}
         </div>
-        <div className="order-1 my-2 ml-4 mr-2">
-          <img className="w-16 rounded" src={logoPath} alt={`${name.toLowerCase()}-logo`} />
-        </div>
+        {logoPath !== null ? logoDiv : null}
       </div>
     </a>
   );
