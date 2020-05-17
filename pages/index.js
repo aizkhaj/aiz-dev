@@ -12,7 +12,7 @@ export default function Index() {
     (a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
   );
 
-  const threeRecentPosts = [
+  let threeRecentPosts = [
     mostRecentPosts[0],
     mostRecentPosts[1],
     mostRecentPosts[2],
